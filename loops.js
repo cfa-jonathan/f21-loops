@@ -1,13 +1,39 @@
+///////////////////////////////
+//// Assignment Code Setup ////
+///////////////////////////////
+
+const getNextWordWords = ['apple', 'celery', 'watermelon', 'papaya', 'carrot', 'blackberry', 'onion', 'strawberry'];
+let nextWordIndex = 0;
+function getNextWord()
+{
+	if (nextWordIndex < getNextWordWords.length)
+	{
+		const wordToReturn = getNextWordWords[nextWordIndex];
+		nextWordIndex++;
+		return wordToReturn;
+	}
+	else
+	{
+		return "";
+	}
+}
+
+/////////////////////////////////////
+//// Don't modify anything above ////
+/////////////////////////////////////
+
+
+
 // while Loops
 let nextWord = getNextWord();
+const bannedWords = ['carrot', 'celery', 'onion'];
 // 1.a) Create a "while" loop that checks to see if "nextWord" does not equal an
-//      empty string "". If the "nextWord" variable is not empty, log the word
+//      empty string "". If the "nextWord" variable is not empty, log its contents
 //      to the console.
 // 1.b) Then call the "getNextWord" function again at the end of the loop's
 //      instructions and store its new value in "nextWord"
 
 
-const bannedWords = ['carrot', 'celery', 'onion'];
 // 2) Inside (1)'s loop, before you log the word to the console, check to see
 //    if the word is a banned word in the "bannedWords" array. If it is, don't
 //    log the word to the console.
@@ -51,22 +77,3 @@ const multidimensionalArray = [['cat','dog'], ['turtle', 'snake']];
 //    sub-array to the console.
 
 
-/////////////////////////////////////
-//// Don't modify anything below ////
-/////////////////////////////////////
-
-const getNextWordWords = ['apple', 'celery', 'watermelon', 'papaya', 'carrot', 'blackberry', 'onion', 'strawberry'];
-let nextWordIndex = 0;
-function getNextWord()
-{
-	if (nextWordIndex < getNextWordWords.length)
-	{
-		const wordToReturn = getNextWordWords[nextWordIndex];
-		nextWordIndex++;
-		return wordToReturn;
-	}
-	else
-	{
-		return "";
-	}
-}
